@@ -57,7 +57,7 @@ class _View2PageState extends State<View2Page> {
 
   Widget buildListModelClass(Model2 Model2) {
     return Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
