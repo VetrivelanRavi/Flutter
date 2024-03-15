@@ -16,7 +16,8 @@ class ViewModelClass {
       
       List<ModelClass> model = jsonData.map((dynamic item) => ModelClass.fromJson(item)).toList();
 
-      return model;
+      return model
+      ;
     } catch (e) {
       throw Exception('Failed to load Screen: $e');
     }

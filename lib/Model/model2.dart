@@ -1,5 +1,4 @@
-
-class Model2 {
+class Property {
   String? type;
   String? id;
   int? askingPrice;
@@ -13,7 +12,7 @@ class Model2 {
   String? description;
   String? patio;
 
-  Model2(
+  Property(
       {this.type,
       this.id,
       this.askingPrice,
@@ -27,7 +26,7 @@ class Model2 {
       this.description,
       this.patio});
 
-  Model2.fromJson(Map<String, dynamic> json) {
+  Property.fromJson(Map<String, dynamic> json) {
     type = json['type'];
     id = json['id'];
     askingPrice = json['askingPrice'];

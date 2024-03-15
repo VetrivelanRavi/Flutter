@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 import '../Model/model.dart';
 import '../ViewModel/view_model.dart';
 import 'view2.dart';
@@ -35,8 +34,6 @@ class _ModelViewState extends State<ModelView> {
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return Center(child: CircularProgressIndicator());
-            } else if (snapshot.hasError) {
-              return Center(child: Text('Error: ${snapshot.error}'));
             } else {
               final List<ModelClass>? ModelClasss = snapshot.data;
               if (ModelClasss != null && ModelClasss.isNotEmpty) {
