@@ -8,7 +8,7 @@ class View2Page extends StatelessWidget {
       future: ViewModel2().fetchDetails(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return CircularProgressIndicator();
+          return Center(child: CircularProgressIndicator());
         } else {
           final property = snapshot.data!;
           return Scaffold(
