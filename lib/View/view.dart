@@ -16,8 +16,7 @@ class _ModelViewState extends State<ModelView> {
   @override
   void initState() {
     super.initState();
-    _modelDataFuture = ViewModelClass()
-        .fetchModel(); // Fetch model data when the widget is initialized
+    _modelDataFuture = ViewModelClass().fetchModel();
   }
 
   @override
@@ -45,7 +44,7 @@ class _ModelViewState extends State<ModelView> {
                   },
                 );
               } else {
-                return Center(child: Text('No data available.'));
+                return const Center(child: Text('No data available.'));
               }
             }
           },

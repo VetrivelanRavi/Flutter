@@ -39,7 +39,7 @@ class View2Page extends StatelessWidget {
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     Text(
                       '${property.description}',
                       style: TextStyle(wordSpacing: 5, height: 2),
@@ -47,7 +47,7 @@ class View2Page extends StatelessWidget {
                     SizedBox(height: 30),
                     Row(
                       children: [
-                        Text(
+                        const Text(
                           'Living Area: ',
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 15),
