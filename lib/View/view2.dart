@@ -8,12 +8,12 @@ class View2Page extends StatelessWidget {
       future: ViewModel2().fetchDetails(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         } else {
           final property = snapshot.data!;
           return Scaffold(
             appBar: AppBar(
-              title: Text('Property Details'),
+              title: const Text('Property Details'),
             ),
             body: SingleChildScrollView(
               child: Padding(
@@ -22,29 +22,29 @@ class View2Page extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Image.network(property.image.toString()),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     Text(
                       '${property.streetAddress}',
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                          const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Text(
                       '${property.area}' ': ${property.municipality}',
-                      style: TextStyle(color: Colors.grey),
+                      style: const TextStyle(color: Colors.grey),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Text(
                       '${property.askingPrice}',
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                          const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     ),
                     const SizedBox(height: 30),
                     Text(
                       '${property.description}',
-                      style: TextStyle(wordSpacing: 5, height: 2),
+                      style: const TextStyle(wordSpacing: 5, height: 2),
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     Row(
                       children: [
                         const Text(
@@ -54,7 +54,7 @@ class View2Page extends StatelessWidget {
                         ),
                         Text(
                           ' ${property.livingArea}m2',
-                          style: TextStyle(wordSpacing: 5, height: 2),
+                          style: const TextStyle(wordSpacing: 5, height: 2),
                         ),
                       ],
                     ),
@@ -62,14 +62,14 @@ class View2Page extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            Text(
+                            const Text(
                               'Number Of Rooms: ',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 15),
                             ),
                             Text(
                               ' ${property.numberOfRooms}',
-                              style: TextStyle(wordSpacing: 5, height: 2),
+                              style: const TextStyle(wordSpacing: 5, height: 2),
                             ),
                           ],
                         ),
@@ -79,14 +79,14 @@ class View2Page extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            Text(
+                            const Text(
                               'Patio:',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 15),
                             ),
                             Text(
                               ' ${property.patio}',
-                              style: TextStyle(wordSpacing: 5, height: 2),
+                              style: const TextStyle(wordSpacing: 5, height: 2),
                             ),
                           ],
                         ),
@@ -96,14 +96,14 @@ class View2Page extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            Text(
+                            const Text(
                               'Days Since Publish: ',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 15),
                             ),
                             Text(
                               ' ${property.daysSincePublish}',
-                              style: TextStyle(wordSpacing: 5, height: 2),
+                              style: const TextStyle(wordSpacing: 5, height: 2),
                             ),
                           ],
                         ),
