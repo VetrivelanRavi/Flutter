@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:home_sale_app/Viewmodel/viewmodel2.dart';
 
@@ -8,7 +9,11 @@ class View2Page extends StatelessWidget {
       future: ViewModel2().fetchDetails(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(child: CircularProgressIndicator());
+          return const Center(
+              child: CircularProgressIndicator(
+            color: Color.fromARGB(255, 255, 70, 70),
+            backgroundColor: Colors.white,
+          ));
         } else {
           final property = snapshot.data!;
           return Scaffold(
@@ -25,8 +30,8 @@ class View2Page extends StatelessWidget {
                     const SizedBox(height: 30),
                     Text(
                       '${property.streetAddress}',
-                      style:
-                          const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                     const SizedBox(height: 10),
                     Text(
@@ -36,8 +41,8 @@ class View2Page extends StatelessWidget {
                     const SizedBox(height: 10),
                     Text(
                       '${property.askingPrice}',
-                      style:
-                          const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 18),
                     ),
                     const SizedBox(height: 30),
                     Text(
