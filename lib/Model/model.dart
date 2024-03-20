@@ -1,5 +1,3 @@
-
-
 class ModelClass {
   String? type;
   String? id;
